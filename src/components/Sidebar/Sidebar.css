@@ -1,0 +1,179 @@
+/* Sidebar Styles */
+.sidebar {
+  min-height: 100vh;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f9;
+  padding: 25px 15px;
+  transition: width 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+  width: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Extended Sidebar */
+.sidebar.extended {
+  width: 250px;
+}
+
+/* Sidebar Items */
+.sidebar .new-chat,
+.sidebar .recent-entry,
+.sidebar .bottom-item {
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #e6eaf1;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #606060;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .new-chat:hover,
+.sidebar .recent-entry:hover,
+.sidebar .bottom-item:hover {
+  background-color: #cfd5de;
+}
+
+/* New Chat Button */
+.sidebar .new-chat {
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: #4a4a4a;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  justify-content: center;
+}
+
+.sidebar .new-chat:hover {
+  background-color: #393939;
+  transform: scale(1.05);
+}
+
+.sidebar.extended .new-chat {
+  width: 100%;
+}
+
+/* Recent Entries */
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1.5s;
+}
+
+.sidebar .recent-entry {
+  color: #282828;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #cfd5de;
+}
+
+/* Bottom Section */
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .bottom-item {
+  color: #282828;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.sidebar .bottom-item:hover {
+  background-color: #cfd5de;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 60px;
+    padding: 20px 10px;
+  }
+
+  .sidebar.extended {
+    width: 200px;
+  }
+
+  .sidebar .new-chat {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .sidebar .new-chat:hover {
+    transform: scale(1.03);
+  }
+
+  .sidebar .recent-entry,
+  .sidebar .bottom-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50px;
+    padding: 15px 5px;
+  }
+
+  .sidebar.extended {
+    width: 180px;
+  }
+
+  .sidebar .new-chat {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .sidebar .new-chat:hover {
+    transform: scale(1.02);
+  }
+
+  .sidebar .recent-entry,
+  .sidebar .bottom-item {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 40px;
+    padding: 10px;
+  }
+
+  .sidebar.extended {
+    width: 150px;
+  }
+
+  .sidebar .new-chat {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .sidebar .recent-entry,
+  .sidebar .bottom-item {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+}
